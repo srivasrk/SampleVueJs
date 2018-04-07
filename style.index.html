@@ -1,8 +1,8 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
-    <div class="demo" @click="attachRed =!attachRed" :class="{red: attachRed}"></div>
-    <div class="demo" :class="{red: attachRed}"></div>
+    <div class="demo" @click="attachRed =!attachRed" :class="attachDivClasses"></div>
+    <div class="demo" ></div>
     <div class="demo"></div>
 </div>
 
@@ -12,6 +12,14 @@
         el: '#app',
         data: {
             attachRed: false
+        },
+        computed: {
+            attachDivClasses: function() {
+                return {
+                    red: this.attachRed,
+                    blue: !this.attachRed
+                };
+            }
         }
     });
 </script>
