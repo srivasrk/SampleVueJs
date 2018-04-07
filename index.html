@@ -21,7 +21,8 @@
         <hr>
         <p v-html='finishedLink'></p>
         <hr>
-        <button v-on:click="increase(2)">Click me! {{ counter }}</button>    
+        <!-- <button v-on:click="increase(2)">Click me! {{ counter }}</button>     -->
+        <button @click="increase(2)">Click me! {{ counter }}</button>    
         <button v-on:click="anotherCounter++">Click me! {{ anotherCounter * 2 }}</button>    
         <p v-on:mousemove="updateCoord">
             Coordinates: {{ x }}/{{ y }} - 
