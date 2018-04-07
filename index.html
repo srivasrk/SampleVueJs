@@ -59,6 +59,19 @@
                     return this.count > 3 ? 'Greater than 3' : 'Not greater than 3';
                 }
             },
+            watch: {
+                count: function() { //data to watch and execute this function when this changes
+                    //computed properties are better optimized
+                    //watch is more suited for async or function which do not return immediately
+                    console.log("watch: count function called");     
+
+                    var vm = this;
+                    //this will reset the coun value to 0 after 3 seconds
+                    setTimeout(function() { // this is an example of async task
+                        vm.count = 0;
+                    }, 3000);
+                }
+            },
             methods: {
                 changeTitle: function(event) {  
                     this.title = event.target.value;
