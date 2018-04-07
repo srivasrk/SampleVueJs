@@ -1,0 +1,18 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <button @click="show = !show">Switch</button>
+    <p v-if="show">You can see me!</p>
+    <p v-else="show">Now you see me!</p>
+    <p>Do you see me too?</p>
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            show: true
+        }
+    });
+</script>
