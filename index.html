@@ -29,6 +29,8 @@
             <span v-on:mousemove.stop="">Another Dead spot</span>
         </p>
         <input type="text" v-on:keyup.enter="alertMe">
+        <hr>
+        <input type="text" v-model="name"> <span>{{ name }}</span>
     </div>
 
     <script>
@@ -41,7 +43,8 @@
                 counter: 0,
                 anotherCounter: 0,
                 x: 0,
-                y: 0
+                y: 0,
+                name: 'Rahul Srivastava'
             },
             methods: {
                 changeTitle: function(event) {  
