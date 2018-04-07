@@ -4,6 +4,8 @@
     <div class="demo" @click="attachRed =!attachRed" :class="attachDivClasses"></div>
     <div class="demo" :style="myStyle"></div>
     <div class="demo" :class="color"></div>
+    <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+    <!-- style can take of css classes -->
     <hr>
     <input type="text" v-model="color">
     <input type="text" v-model="width">
