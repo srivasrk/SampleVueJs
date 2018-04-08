@@ -2,7 +2,15 @@
 
 <div id="app">
     <ul>
-        <li v-for="i in ingredients">{{ i }}</li>
+        <li v-for="(ingredient, index) in ingredients">({{index + 1}}) {{ ingredient }}</li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="person in persons">
+            <!-- {{person.name}}, {{person.age}}, {{person.gender}}             -->
+            <!-- loop through properties -->
+            <div v-for="(value, key, index) in person"> ({{index+1}}) {{key}}: {{value}} </div> 
+        </li>
     </ul>
 </div>
 
@@ -13,8 +21,8 @@
         data: {
             ingredients: ['meat', 'fruit', 'cookies'],
             persons: [
-                {name: 'Rahul', age: 28, gender: 'male'},
-                {name: 'Mini', age: 27, gender: 'female'}
+                {Name: 'Rahul', Age: 28, Gender: 'male'},
+                {Name: 'Mini', Age: 27, Gender: 'female'}
             ]
         }
     });
