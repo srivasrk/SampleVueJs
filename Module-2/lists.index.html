@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="i in ingredients">{{ i }}</li>
+    </ul>
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            ingredients: ['meat', 'fruit', 'cookies'],
+            persons: [
+                {name: 'Rahul', age: 28, gender: 'male'},
+                {name: 'Mini', age: 27, gender: 'female'}
+            ]
+        }
+    });
+</script>
