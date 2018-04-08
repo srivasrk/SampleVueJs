@@ -1,0 +1,29 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="(ingredient, index) in ingredients">({{index + 1}}) {{ ingredient }}</li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="person in persons">
+            <!-- {{person.name}}, {{person.age}}, {{person.gender}}             -->
+            <!-- loop through properties -->
+            <div v-for="(value, key, index) in person"> ({{index+1}}) {{key}}: {{value}} </div> 
+        </li>
+    </ul>
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            ingredients: ['meat', 'fruit', 'cookies'],
+            persons: [
+                {Name: 'Rahul', Age: 28, Gender: 'male'},
+                {Name: 'Mini', Age: 27, Gender: 'female'}
+            ]
+        }
+    });
+</script>
